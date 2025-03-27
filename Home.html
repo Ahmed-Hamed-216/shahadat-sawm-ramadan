@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <title>شهادات تقدير لصوم رمضان</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="شهادات تقدير, الأطفال, رمضان, صيام, تحفيز الأطفال">
+    <meta name="description" content="انشئ شهادة تقدير لابنك او لبنتك بمناسبة صوم رمضان">
+    <meta name="theme-color" content="#0d6efd">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-award"></i> شهادة تقدير رمضانية</h1>
+            <p class="subtitle">اصنع شهادة تقدير مميزة لطفلك تشجيعاً له على الصيام</p>
+        </header>
+        
+        <main class="main-content">
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="name-input"><i class="fas fa-user"></i> اسم الطفل</label>
+                    <input type="text" class="form-control input" id="name-input" placeholder="أدخل اسم الطفل هنا" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="image-input"><i class="fas fa-image"></i> نوع الشهادة</label>
+                    <select class="form-control input" id="image-input">
+                        <option value="" selected disabled>اختر نوع الشهادة</option>
+                        <option value="https://i.ibb.co/nwCgL89/m2.jpg">شهادة تقدير للولد</option>
+                        <option value="https://i.ibb.co/JcfwC4w/f2.jpg">شهادة تقدير للبنت</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary generate-btn" onclick="generateImage()">
+                    <i class="fas fa-magic"></i> إنشاء الشهادة
+                </button>
+            </div>
+            
+            <div class="result-section" id="result-section">
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>جاري إنشاء الشهادة...</p>
+                </div>
+                
+                <div class="result" id="result" style="display: none;">
+                    <div class="alert alert-success" id="success-message" style="display: none;"></div>
+                    <img src="" class="certificate-image" id="generated-image" />
+                    <div class="action-buttons">
+                        <a href="" class="download-btn" download="شهادة تقدير.png" id="download-link">
+                            <i class="fas fa-download"></i> تحميل الشهادة
+                        </a>
+                        <button class="share-btn" id="share-btn">
+                            <i class="fas fa-share-alt"></i> مشاركة الشهادة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>جميع الحقوق محفوظة &copy; <span id="year"></span></p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pica/8.0.0/pica.min.js"></script>
+    <script src="assets/script.js"></script>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
